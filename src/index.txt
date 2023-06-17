@@ -1,0 +1,4 @@
+modelos
+shcemas
+repositorios
+serviços (criar,ler Uint8ClampedArray,ler todos)
