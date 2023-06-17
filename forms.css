@@ -1,0 +1,17 @@
+#sec{
+ 
+
+border-radius: 15px;
+height:35rem ;
+width: 80%;
+margin-top: 3rem;
+}
+.h1{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    padding-top:2rem ;
+}
+label{
+color: black;
+}
