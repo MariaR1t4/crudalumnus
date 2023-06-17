@@ -23,8 +23,8 @@ class ClassroomService {
         return await ClassroomRepositorio.find();
     }
 
-    public async getClassroomById(id: string) : Promise<Classroom | null> {
-        return await ClassroomRepositorio.findOneBy({id});
+    public async getClassroomById(idClassroom: string) : Promise<Classroom | null> {
+        return await ClassroomRepositorio.findOneBy({idClassroom}); 
     }
 }
 
