@@ -9,3 +9,5 @@ export const ClassroomSchema = z.object ({
     finishClass: z.date()
     })
 })
+
+export default ClassroomSchema;

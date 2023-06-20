@@ -34,6 +34,6 @@ class ClassroomService {
     // public async uptadeClassroomById(idClassroom: string) : Promise <void>{
         
     }
-}
+
 
 export default ClassroomService
