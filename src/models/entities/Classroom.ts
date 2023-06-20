@@ -1,17 +1,17 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
 class Classroom {
-    @PrimaryColumn()
-    idClassroom:string;              
+    @PrimaryGeneratedColumn("uuid")
+    idClassroom: string;              
     @Column()
-    idTeacher: number;            
+    idTeacher: string;            
     @Column()
-    IdClass: number;          
+    IdSubject: string;          
     @Column()
-    startClass: Date;       
+    Date: Date;       
     @Column()
-    finishClass: Date;
+    Description: string;
 }
 
 export default Classroom;

@@ -20,7 +20,7 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="home.html">Home</a>
           <a href="sobre.html">Sobre</a>
-          <a href="itens.html">Aulas</a>
+          <a href="aulas.html">Aulas</a>
           <a href="forms.html">Cadastrar aula</a>
         </div>
         
@@ -98,48 +98,49 @@
         }
 
     const Form = document.getElementById("Form");
-    const FotoForm = document.getElementById("FotoForm");
-    const nomeError = document.getElementById('nomeError');
+  
+    const nomeError = document.getElementById('nome');
 
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    meuForm.addEventListener('submit', ev => {
+    Form.addEventListener('submit', ev => {
       ev.preventDefault();
       const formData = new FormData(Form);
-      const produto = {};
+      const aulas = {};
 
 
-      formData.forEach((valor, atributo) => produto[atributo] = valor);
+      formData.forEach((valor, atributo) => aulas[atributo] = valor);
 
-      if(produto.nome.length < 5) {
+      if(aulas.nome.length >4) {
         console.log('here error')
         nomeError.style = { display: 'block', color: 'red'}
         return;
       }
 
-      console.log(JSON.stringify(produto))
-      fetch('http://localhost:38000/app/produtos', {
+      console.log(JSON.stringify(aulas))
+      fetch('http://localhost:38000/registro', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(produto) 
+        body: JSON.stringify(aulas) 
       })
         .then(r => r.json())
     })
 
-    function loadProduto() {
+    function loadaulas() {
      
       if (id) {
         
 
-        fetch('http://localhost:38000/app/produtos/' + id)
+        fetch('http://localhost:38000/registro' + id)
           .then(r => r.json())
-          .then(produto => {
-            console.log(produto)
-            document.getElementById("nome").value = produto.nome
-            document.getElementById("descricao").value = produto.descricao
-            document.getElementById("preco").value = produto.preco
-            document.getElementById("serie").value = produto.serie
+          .then(aulas => {
+            console.log(aulas)
+            document.getElementById("nome").value = aulas.nome
+            document.getElementById("data").value = aulas.data
+            document.getElementById("curso").value = aulas.curso
+            document.getElementById("materia").value = aulas.materia
+            document.getElementById("descricao").value = aulas.descricao
 
           })
 
@@ -149,7 +150,7 @@
     }
 
 
-    loadProduto();
+    loadaulas();
 
         </script>
            

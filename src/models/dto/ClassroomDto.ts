@@ -2,12 +2,11 @@ import {z} from "zod";
 
 export const ClassroomSchema = z.object ({
     body: z.object({
-    idClassroom: z.coerce.number(),         
-    idTeacher: z.coerce.number(),          
-    IdClass: z.coerce.number(),         
+    idClassroom: z.string(),         
+    idTeacher: z.string(),          
+    IdSubject: z.string(),         
     startClass: z.date(), 
-    finishClass: z.date()
+    Description: z.string()
     })
 })
 
-export default ClassroomSchema;

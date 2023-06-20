@@ -5,7 +5,7 @@ import Classroom from "./entities/Classroom";
 export const AppDataSource = new DataSource({
     type:"mysql",
     host:"localhost",
-    port:3306,
+    port:38000,
     username: "root",
     database: "alumnus",
     synchronize: true,

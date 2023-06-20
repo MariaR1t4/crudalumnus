@@ -97,11 +97,11 @@ color: white;
     
     }
     @keyframes carouselAnim {
-    0% { background-image: url("../Projetofinal/Sala\ 1.png");  
+    0% { background-image: url("../Alumnus/Sala\ 1.png");  
         background-repeat: no-repeat;
         background-size:cover;} 
 
-    100% { background-image: url("../Projetofinal/Sala\ 2.jpg");  
+    100% { background-image: url("../Alumnus/Sala\ 2.jpg");  
         background-repeat: no-repeat;
         background-size:cover;} 
     }

@@ -6,7 +6,7 @@ import cors from 'cors';
 import favicon from 'serve-favicon';
 
 const app = express();
-const port = 3000
+const port = 38000
 
 app.get('/test')
 app.use(express.json());
