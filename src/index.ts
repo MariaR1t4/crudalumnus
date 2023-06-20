@@ -4,6 +4,9 @@ import { AppDataSource } from "./models/DataBase";
 import morgan from 'morgan';
 import cors from 'cors';
 import favicon from 'serve-favicon';
+import classroomRouter from "./router/classroomRouter";
+import path from "path";
+
 
 const app = express();
 const port = 38000
@@ -22,3 +25,6 @@ app.listen(port,()=>{
     AppDataSource.initialize().then(r => console.log('Banco de Dados iniciado'));
     console.log('Sucesso')
 });
+app.use('/', express.static(path.join(__dirname, 'src')))
+app.use('/classroom',classroomRouter );
+
