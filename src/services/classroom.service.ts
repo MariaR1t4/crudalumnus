@@ -26,6 +26,14 @@ class ClassroomService {
     public async getClassroomById(idClassroom: string) : Promise<Classroom | null> {
         return await ClassroomRepositorio.findOneBy({idClassroom}); 
     }
+
+    public async deleteClassroomByID(idClassroom: string) : Promise <void>{
+        await ClassroomRepositorio.delete({idClassroom});
+    }
+
+    // public async uptadeClassroomById(idClassroom: string) : Promise <void>{
+        
+    }
 }
 
 export default ClassroomService
