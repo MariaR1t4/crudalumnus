@@ -41,6 +41,14 @@ class ClassroomController {
         await classroomService.deleteClassroomByID(id, classroom);
         res.json('ok');
     }
+
+    public async updateClassroomById(req:Request,res:Response){
+        const classroomService = ClassroomService.getInstance();
+        const id = req.params.id;
+        const classroom = req.body;
+        await classroomService.updateClassroomById(id,classroom);
+        res.json('ok');
+    }
 }
 
 export default ClassroomController

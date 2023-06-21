@@ -1,12 +1,12 @@
 import {Router} from "express"
-
-const classroomRouter= Router();
 import ClassroomController from "../controllers/classroom.Controllers";
 import { ClassroomSchema } from "../models/dto/ClassroomDto";
 
-//he routes to read
+const classroomRouter= Router();
+
 classroomRouter.get('/registro',ClassroomController.getInstance().getClassroom)
 classroomRouter.get('/:id',ClassroomController.getInstance().getClassroomById)
 classroomRouter.delete('/:id', ClassroomController.getInstance().deleteClassroomById)
+classroomRouter.put('/:id',ClassroomController.getInstance().updateClassroomById)
 
 export default classroomRouter
