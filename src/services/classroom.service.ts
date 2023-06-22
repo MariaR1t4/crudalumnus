@@ -31,9 +31,12 @@ class ClassroomService {
         await ClassroomRepositorio.delete({idClassroom});
     }
 
-    // public async uptadeClassroomById(idClassroom: string) : Promise <void>{
-        
-    }
-
+    /*/public async uptadeClassroomById(idClassroom: string,) : Promise <void>{
+        const ClassroomNow = await ClassroomRepositorio.findOneBy({idClassroom});
+        if(ClassroomNow){
+            ClassroomNow.Date = 
+        }
+    }*/
+}
 
 export default ClassroomService
