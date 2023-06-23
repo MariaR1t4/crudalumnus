@@ -37,8 +37,7 @@ class ClassroomController {
     public async deleteClassroomById(req: Request,res:Response){
         const classroomService = ClassroomService.getInstance();
         const id = req.params.id;
-        const classroom = req.body;
-        await classroomService.deleteClassroomByID(id, classroom);
+        await classroomService.deleteClassroomByID(id);
         res.json('ok');
     }
 
@@ -46,7 +45,7 @@ class ClassroomController {
         const classroomService = ClassroomService.getInstance();
         const id = req.params.id;
         const classroom = req.body;
-        await classroomService.updateClassroomById(id,classroom);
+        await classroomService.uptadeClassroomById(id,classroom);
         res.json('ok');
     }
 }

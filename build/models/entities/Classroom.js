@@ -11,10 +11,10 @@ let Classroom = class Classroom {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid")
-], Classroom.prototype, "idClassroom", void 0);
+], Classroom.prototype, "IdClassroom", void 0);
 __decorate([
     (0, typeorm_1.Column)()
-], Classroom.prototype, "idTeacher", void 0);
+], Classroom.prototype, "IdTeacher", void 0);
 __decorate([
     (0, typeorm_1.Column)()
 ], Classroom.prototype, "IdSubject", void 0);

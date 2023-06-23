@@ -23,20 +23,24 @@ class ClassroomService {
         return await ClassroomRepositorio.find();
     }
 
-    public async getClassroomById(idClassroom: string) : Promise<Classroom | null> {
-        return await ClassroomRepositorio.findOneBy({idClassroom}); 
+    public async getClassroomById(IdClassroom: string) : Promise<Classroom | null> {
+        return await ClassroomRepositorio.findOneBy({IdClassroom}); 
     }
 
-    public async deleteClassroomByID(idClassroom: string) : Promise <void>{
-        await ClassroomRepositorio.delete({idClassroom});
+    public async deleteClassroomByID(IdClassroom: string) : Promise <void>{
+        await ClassroomRepositorio.delete({IdClassroom});
     }
 
-    /*/public async uptadeClassroomById(idClassroom: string,) : Promise <void>{
-        const ClassroomNow = await ClassroomRepositorio.findOneBy({idClassroom});
+    public async uptadeClassroomById(IdClassroom: string,classroom : Classroom) : Promise <void>{
+        const ClassroomNow = await ClassroomRepositorio.findOneBy({IdClassroom});
         if(ClassroomNow){
-            ClassroomNow.Date = 
+            ClassroomNow.Date = classroom.Date;
+            ClassroomNow.Description = classroom.Description;
+            ClassroomNow.IdSubject = classroom.IdSubject;
+            ClassroomNow.IdClassroom = classroom.IdClassroom;
+            ClassroomNow.IdTeacher = classroom.IdTeacher;
         }
-    }*/
+    }
 }
 
 export default ClassroomService

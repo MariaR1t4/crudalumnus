@@ -8,6 +8,8 @@ require("reflect-metadata");
 const DataBase_1 = require("./models/DataBase");
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
+const classroomRouter_1 = __importDefault(require("./router/classroomRouter"));
+const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 const port = 38000;
 app.get('/test');
@@ -20,3 +22,5 @@ app.listen(port, () => {
     DataBase_1.AppDataSource.initialize().then(r => console.log('Banco de Dados iniciado'));
     console.log('Sucesso');
 });
+app.use('/app', express_1.default.static(path_1.default.join(__dirname, 'src')));
+app.use('/classroom', classroomRouter_1.default);

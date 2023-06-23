@@ -3,9 +3,9 @@ import { Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 @Entity()
 class Classroom {
     @PrimaryGeneratedColumn("uuid")
-    idClassroom: string;              
+    IdClassroom: string;              
     @Column()
-    idTeacher: string;            
+    IdTeacher: string;            
     @Column()
     IdSubject: string;          
     @Column()

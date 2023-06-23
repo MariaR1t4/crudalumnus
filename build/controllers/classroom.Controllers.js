@@ -46,6 +46,19 @@ class ClassroomController {
     }
     deleteClassroomById(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const classroomService = classroom_service_1.default.getInstance();
+            const id = req.params.id;
+            yield classroomService.deleteClassroomByID(id);
+            res.json('ok');
+        });
+    }
+    updateClassroomById(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const classroomService = classroom_service_1.default.getInstance();
+            const id = req.params.id;
+            const classroom = req.body;
+            yield classroomService.uptadeClassroomById(id, classroom);
+            res.json('ok');
         });
     }
 }
