@@ -76,7 +76,7 @@ color: white;
   #main {
     transition: margin-left .5s;
     padding: 16px;
-    margin-top: -2rem;
+    margin-top: 0;
     position: fixed;
   
   }

@@ -56,6 +56,7 @@
                         <p class="card-text">${p.curso}.</p>
                         <p class="card-text">${p.materia}.</p>
                         <p class"card-text">${p.descricaoaula}</p>
+                        <a href="/formulario.html?id=${p.id}" class="btn btn-default">Editar Produto</a>
                     </div>
                 `).join('');
                 Aulas.innerHTML = conteudo;

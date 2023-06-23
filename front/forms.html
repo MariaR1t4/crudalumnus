@@ -119,7 +119,7 @@
       }
 
       console.log(JSON.stringify(aulas))
-      fetch('http://localhost:38000/registro', {
+      fetch('http://localhost:38000/app/classroom', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(aulas) 
@@ -132,7 +132,7 @@
       if (id) {
         
 
-        fetch('http://localhost:38000/registro' + id)
+        fetch('http://localhost:38000/app/classroom' + id)
           .then(r => r.json())
           .then(aulas => {
             console.log(aulas)

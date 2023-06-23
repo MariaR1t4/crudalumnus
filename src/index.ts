@@ -25,6 +25,6 @@ app.listen(port,()=>{
     AppDataSource.initialize().then(r => console.log('Banco de Dados iniciado'));
     console.log('Sucesso')
 });
-app.use('/', express.static(path.join(__dirname, 'src')))
+app.use('/app', express.static(path.join(__dirname, 'src')))
 app.use('/classroom',classroomRouter );
 
