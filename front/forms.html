@@ -30,52 +30,48 @@
        
         <div id="chamada">
           <form class="row g-3" id="Form">
-    
-    
-            <div class="col-md-12">
-              <label for="nome" class="form-label">Id da Aula</label>
-              <input type="text" class="form-control" id="id" >
-            </div>
-    
-            <div class="col-md-12">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" name="nome">
-              <small id="nomeError" style="display: none;">Nome errado</small>
-            </div>
-           
-            <div class="col-md-4 " style="margin-top: 1rem; ;">
-              <label for="data" class="form-label">Data</label>
-              <input type="date" class="form-control" name="data" id="data" aria-describedby="helpId" placeholder="" >
-        
+              <div class="col-md-12">
+                <label for="nome" class="form-label">Id da Aula</label>
+                <input type="text" class="form-control" id="id" >
+              </div>
+      
+              <div class="col-md-12">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+                <small id="nomeError" style="display: none;">Nome errado</small>
+              </div>
             
-            </div>
-            <div class="col-md-4 " style="margin-top: 1rem;">
-              <label for="curso" class="form-label">Curso</label>
-              <input type="text" class="form-control" name="curso" id="curso" aria-describedby="helpId" value="Informatica p/ Internet" readonly>
-    
-            </div>
-            <div class="col-md-4" style="margin-top: 1rem;">
-              <label for="materia" class="form-label">Matéria</label>
-              <input type="text" class="form-control" name="materia" id="materia" placeholder="Escolha a matéria" list="mat">
-              <datalist id="mat">
-                <option value="LPI">Fillipe</option>
-                <option value="Design">Adriano</option>
-                <option value="Banco de dados">Adileine</option>
-                <option value="PHP">Helder</option>
-                <option value="Gestão de Conteúdo Web">Robson</option>
-              </datalist>
-            </div >
+              <div class="col-md-4 " style="margin-top: 1rem; ;">
+                <label for="data" class="form-label">Data</label>
+                <input type="date" class="form-control" name="data" id="data" aria-describedby="helpId" placeholder="" >
           
-            <div class="mb-3" style="margin-top: 1rem;">
-              <label for="descricao" class="form-label">Descrição da aula</label>
-              <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
-            </div>
+              
+              </div>
+              <div class="col-md-4 " style="margin-top: 1rem;">
+                <label for="curso" class="form-label">Curso</label>
+                <input type="text" class="form-control" name="curso" id="curso" aria-describedby="helpId" value="Informatica p/ Internet" readonly>
+      
+              </div>
+              <div class="col-md-4" style="margin-top: 1rem;">
+                <label for="materia" class="form-label">Matéria</label>
+                <input type="text" class="form-control" name="materia" id="materia" placeholder="Escolha a matéria" list="mat">
+                <datalist id="mat">
+                  <option value="LPI">Fillipe</option>
+                  <option value="Design">Adriano</option>
+                  <option value="Banco de dados">Adileine</option>
+                  <option value="PHP">Helder</option>
+                  <option value="Gestão de Conteúdo Web">Robson</option>
+                </datalist>
+              </div >
             
-    
-            <div class="col-12" style="margin-top: 1rem; ;">
-              <button id="submitButton" type="submit" class="btn btn-primary">Registrar aula</button>
-            </div>
-          
+              <div class="mb-3" style="margin-top: 1rem;">
+                <label for="descricao" class="form-label">Descrição da aula</label>
+                <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
+              </div>
+              <div class="col-12" style="margin-top: 1rem; ;">
+                <button id="submitButton" type="submit" class="btn btn-primary">Registrar aula</button>
+              </div>
+          </form>
           </div>
         </div>
         
@@ -105,19 +101,21 @@
 
       formData.forEach((valor, atributo) => aulas[atributo] = valor);
 
-      if(aulas.nome.length >4) {
+      /*if(aulas.nome.length >4) {
         console.log('here error')
         nomeError.style = { display: 'block', color: 'red'}
         return;
-      }
+      }*/
 
       console.log(JSON.stringify(aulas))
-      fetch('http://localhost:3030/app/classroom', {
+      fetch('http://localhost:3030/app/classroom/chamada', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(aulas) 
       })
         .then(r => r.json())
+        alert("Chamada registrada com sucesso!")
+        window.location.href = 'aulas.html'
     })
 
     function loadaulas() {

@@ -53,7 +53,9 @@ class ClassroomService {
                 ClassroomNow.descricao = classroom.descricao;
                 ClassroomNow.nome = classroom.nome;
                 ClassroomNow.materia = classroom.materia;
+                yield ClassroomRepositorie_1.default.save(ClassroomNow);
             }
+            Promise.resolve();
         });
     }
 }

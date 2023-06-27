@@ -45,7 +45,7 @@
 
         function loadAulas(){
             const Aulas = document.getElementById('Aulas');
-            fetch('http://localhost:38000/app/Aulas')
+            fetch('http://localhost:3030/app/classroom')
             .then(f => f.json())
             .then(data => {
                 const conteudo = data.map(p => `
