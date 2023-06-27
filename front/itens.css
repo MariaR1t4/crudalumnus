@@ -9,7 +9,7 @@ main {
     background-color: #f2f2f2;
     margin-left: 3rem;
     margin-right: -2rem;
-    position: relative;
+    position: fixed;
     height: 20rem;
     width: 10rem;
     padding: 0 5rem 5rem 5rem;

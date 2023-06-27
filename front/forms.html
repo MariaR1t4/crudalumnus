@@ -16,18 +16,15 @@
    
 <main>
    
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div  class="sidenav">
+          <a href="javascript:void(0)" ></a>
           <a href="index.html">Home</a>
           <a href="sobre.html">Sobre</a>
           <a href="aulas.html">Aulas</a>
           <a href="forms.html">Cadastrar aula</a>
         </div>
         
-        <div id="main">
-          
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="bar">&#9776; </span>
-        </div>
+      
         <h1 class="h1" >Registrar chamada</h1>
         <section class="container" id="sec" >
        
@@ -88,15 +85,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
         <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
+     
         function data(){
          document.getElementById("data").datepicker()
         }

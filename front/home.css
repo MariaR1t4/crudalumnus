@@ -4,7 +4,8 @@ body{
   header{
     height: 3rem;
     width: 100%;
-  background-color: black;
+    background-color:
+    #2d66ac;
     top: 0;
     left: 0;
     position: fixed;
@@ -12,7 +13,7 @@ body{
 
 main{
   padding-top: 3rem;
-  background: linear-gradient(180deg, #2C2C2C 0%, rgba(40, 40, 40, 0) 99.97%, rgba(30, 30, 30, 0.265625) 99.98%, rgba(31, 31, 31, 0.239063) 99.99%);
+ 
   width: 100%;
   height: 100%;
   top: 0;
@@ -22,13 +23,11 @@ main{
   background-color: green;
 }
 
-#bar {
-color: white;
-}
+
 
   .sidenav {
     height: 100%;
-    width: 0;
+    width: 13rem;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -65,21 +64,9 @@ color: white;
     color: #f1f1f1;
   }
   
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
   
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-    margin-top: 0;
-    position: fixed;
   
-  }
+
  
   
   @media screen and (max-height: 450px) {
@@ -110,5 +97,5 @@ color: white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 5rem;
         margin-top: 1rem;
-        color: white;
+        color: black;
     }

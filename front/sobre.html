@@ -16,23 +16,22 @@
    
 <main>
     
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" id="menu" onclick="closeNav()">&times;</a>
+        <div class="sidenav">
+          <a href="javascript:void(0)" ></a>
           <a href="index.html">Home</a>
           <a href="sobre.html">Sobre</a>
           <a href="aulas.html">Aulas</a>
           <a href="forms.html">Cadastrar aula</a>
         </div>
       
-        <div id="main">
-          
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="bar">&#9776; </span>
-        </div>
+       
         <h1>Quem somos?</h1>
         <div class="text">
         <p>Somos um grupo de alunos do curso Informática p/ Internet do segundo módulo.
           Nosso grupo é composto por 7 alunos.
           Temos o propósito de melhoria das Instituições de ensino com nosso projeto. </p>
+        </div>
+        <div>
                <h1>O Projeto</h1>
           <p>
           Nosso projeto é um software para registro de frequências escolares, onde os própios alunos registrem sua presença em sala de aula, nele 
@@ -41,23 +40,15 @@
           validação via token utilizando a biblioteca JWT(JSON WEB TOKEN).
           Para validação do token, o professor fara o login e através do seu login escolhera a turma gerara um token que durará 5 minutos para os alunos registrarem sua frequência.
           </p>
+        </div>
+      <div>
           <h1>Objetivo</h1>
           <p>Nosso objetivo é otimizar o tempo em sala de aula visando aumentar o aproveitamento e a produtividade tanto do aluno quanto do professor.
             </p>
         </div>
     </main>
         
-        <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
-        </script>
+      
            
         </body>
         </html> 

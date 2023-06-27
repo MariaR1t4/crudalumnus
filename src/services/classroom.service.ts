@@ -40,7 +40,10 @@ class ClassroomService {
             ClassroomNow.descricao = classroom.descricao;
             ClassroomNow.nome = classroom.nome;
             ClassroomNow.materia = classroom.materia;
+            await ClassroomRepositorio.save(ClassroomNow)
         }
+        
+        Promise.resolve();
     }
 }
 
