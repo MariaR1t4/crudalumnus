@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,13 +28,17 @@
           
           <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="bar">&#9776; </span>
         </div>
-        <h1 class="h1">Registrar chamada</h1>
+        <h1 class="h1" >Registrar chamada</h1>
         <section class="container" id="sec" >
        
         <div id="chamada">
           <form class="row g-3" id="Form">
     
     
+            <div class="col-md-12">
+              <label for="nome" class="form-label">Id da Aula</label>
+              <input type="text" class="form-control" id="id" >
+            </div>
     
             <div class="col-md-12">
               <label for="nome" class="form-label">Nome</label>
@@ -119,7 +123,7 @@
       }
 
       console.log(JSON.stringify(aulas))
-      fetch('http://localhost:38000/app/classroom', {
+      fetch('http://localhost:3030/app/classroom', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(aulas) 
@@ -130,24 +134,26 @@
     function loadaulas() {
      
       if (id) {
-        
+        document.getElementById("id").setAttribute('readonly', true)
 
-        fetch('http://localhost:38000/app/classroom' + id)
+        fetch('http://localhost:3030/app/classroom/' + id)
           .then(r => r.json())
           .then(aulas => {
             console.log(aulas)
+            document.getElementById("id").value = aulas.id
             document.getElementById("nome").value = aulas.nome
-            document.getElementById("data").value = aulas.data
+            document.getElementById("data").value = aulas.data.substring(0, 10)  // yyyy (4) + -(1) + mm (2) + - (1) + dd (2)
             document.getElementById("curso").value = aulas.curso
             document.getElementById("materia").value = aulas.materia
             document.getElementById("descricao").value = aulas.descricao
 
           })
 
-      } else {
-        return;
-      }
+    } else {
+      document.getElementById("id").style.display="none"
+      document.getElementById("data").value = new Date().toISOString().substring(0, 10)
     }
+  }
 
 
     loadaulas();

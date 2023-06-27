@@ -1,3 +1,4 @@
+import { v4 } from "uuid";
 import Classroom from "../models/entities/Classroom";
 import ClassroomRepositorio from "../models/repositories/ClassroomRepositorie";
 
@@ -16,6 +17,7 @@ class ClassroomService {
     }
 
     public async saveClassroom(obj: Classroom): Promise<Classroom>{
+        obj.id = v4();
         return await ClassroomRepositorio.save(obj);
     }
 
@@ -23,22 +25,21 @@ class ClassroomService {
         return await ClassroomRepositorio.find();
     }
 
-    public async getClassroomById(IdClassroom: string) : Promise<Classroom | null> {
-        return await ClassroomRepositorio.findOneBy({IdClassroom}); 
+    public async getClassroomById(id: string) : Promise<Classroom | null> {
+        return await ClassroomRepositorio.findOneBy({id}); 
     }
 
-    public async deleteClassroomByID(IdClassroom: string) : Promise <void>{
-        await ClassroomRepositorio.delete({IdClassroom});
+    public async deleteClassroomByID(id: string) : Promise <void>{
+        await ClassroomRepositorio.delete({id});
     }
 
-    public async uptadeClassroomById(IdClassroom: string,classroom : Classroom) : Promise <void>{
-        const ClassroomNow = await ClassroomRepositorio.findOneBy({IdClassroom});
+    public async uptadeClassroomById(id: string,classroom : Classroom) : Promise <void>{
+        const ClassroomNow = await ClassroomRepositorio.findOneBy({id});
         if(ClassroomNow){
-            ClassroomNow.Date = classroom.Date;
-            ClassroomNow.Description = classroom.Description;
-            ClassroomNow.IdSubject = classroom.IdSubject;
-            ClassroomNow.IdClassroom = classroom.IdClassroom;
-            ClassroomNow.IdTeacher = classroom.IdTeacher;
+            ClassroomNow.data = classroom.data;
+            ClassroomNow.descricao = classroom.descricao;
+            ClassroomNow.nome = classroom.nome;
+            ClassroomNow.materia = classroom.materia;
         }
     }
 }

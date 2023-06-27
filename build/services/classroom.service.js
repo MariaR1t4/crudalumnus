@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const uuid_1 = require("uuid");
 const ClassroomRepositorie_1 = __importDefault(require("../models/repositories/ClassroomRepositorie"));
 class ClassroomService {
     constructor() {
@@ -25,6 +26,7 @@ class ClassroomService {
     }
     saveClassroom(obj) {
         return __awaiter(this, void 0, void 0, function* () {
+            obj.id = (0, uuid_1.v4)();
             return yield ClassroomRepositorie_1.default.save(obj);
         });
     }
@@ -33,25 +35,24 @@ class ClassroomService {
             return yield ClassroomRepositorie_1.default.find();
         });
     }
-    getClassroomById(IdClassroom) {
+    getClassroomById(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ClassroomRepositorie_1.default.findOneBy({ IdClassroom });
+            return yield ClassroomRepositorie_1.default.findOneBy({ id });
         });
     }
-    deleteClassroomByID(IdClassroom) {
+    deleteClassroomByID(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield ClassroomRepositorie_1.default.delete({ IdClassroom });
+            yield ClassroomRepositorie_1.default.delete({ id });
         });
     }
-    uptadeClassroomById(IdClassroom, classroom) {
+    uptadeClassroomById(id, classroom) {
         return __awaiter(this, void 0, void 0, function* () {
-            const ClassroomNow = yield ClassroomRepositorie_1.default.findOneBy({ IdClassroom });
+            const ClassroomNow = yield ClassroomRepositorie_1.default.findOneBy({ id });
             if (ClassroomNow) {
-                ClassroomNow.Date = classroom.Date;
-                ClassroomNow.Description = classroom.Description;
-                ClassroomNow.IdSubject = classroom.IdSubject;
-                ClassroomNow.IdClassroom = classroom.IdClassroom;
-                ClassroomNow.IdTeacher = classroom.IdTeacher;
+                ClassroomNow.data = classroom.data;
+                ClassroomNow.descricao = classroom.descricao;
+                ClassroomNow.nome = classroom.nome;
+                ClassroomNow.materia = classroom.materia;
             }
         });
     }

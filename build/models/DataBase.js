@@ -9,8 +9,9 @@ const Classroom_1 = __importDefault(require("./entities/Classroom"));
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "mysql",
     host: "localhost",
-    port: 38000,
+    port: 3306,
     username: "root",
+    password: "1234",
     database: "alumnus",
     synchronize: true,
     logging: true,

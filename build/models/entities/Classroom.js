@@ -5,25 +5,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
 const typeorm_1 = require("typeorm");
 let Classroom = class Classroom {
 };
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)("uuid")
-], Classroom.prototype, "IdClassroom", void 0);
+    (0, typeorm_1.PrimaryColumn)(),
+    __metadata("design:type", String)
+], Classroom.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)()
-], Classroom.prototype, "IdTeacher", void 0);
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], Classroom.prototype, "curso", void 0);
 __decorate([
-    (0, typeorm_1.Column)()
-], Classroom.prototype, "IdSubject", void 0);
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Classroom.prototype, "nome", void 0);
 __decorate([
-    (0, typeorm_1.Column)()
-], Classroom.prototype, "Date", void 0);
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Date)
+], Classroom.prototype, "data", void 0);
 __decorate([
-    (0, typeorm_1.Column)()
-], Classroom.prototype, "Description", void 0);
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Classroom.prototype, "descricao", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Classroom.prototype, "materia", void 0);
 Classroom = __decorate([
     (0, typeorm_1.Entity)()
 ], Classroom);

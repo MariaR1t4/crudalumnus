@@ -1,17 +1,20 @@
-import { Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import "reflect-metadata";
+import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
 class Classroom {
-    @PrimaryGeneratedColumn("uuid")
-    IdClassroom: string;              
+    @PrimaryColumn()
+    id: string;              
+    @Column({nullable: true})
+    curso: string;            
     @Column()
-    IdTeacher: string;            
+    nome: string;          
     @Column()
-    IdSubject: string;          
+    data: Date;       
     @Column()
-    Date: Date;       
+    descricao: string;
     @Column()
-    Description: string;
+    materia: string;
 }
 
 export default Classroom;

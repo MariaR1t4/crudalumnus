@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +16,10 @@
 <main >
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="index.html">Home</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="aulas.html">Aulas</a>
-          <a href="forms.html">Cadastrar aula</a>
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="sobre.html">Sobre</a>
+          <a class="nav-link" href="aulas.html">Aulas</a>
+          <a class="nav-link" href="forms.html">Cadastrar aula</a>
         </div>
         <div id="main">
           
@@ -45,17 +45,19 @@
 
         function loadAulas(){
             const Aulas = document.getElementById('Aulas');
-            fetch('http://localhost:38000/app/Aulas')
+            fetch('http://localhost:3030/app/classroom')
             .then(f => f.json())
             .then(data => {
                 const conteudo = data.map(p => `
                 
                     <div class="card-body">
-                        <h5 class="card-title">${p.nome}e</h5>
-                        <p class="card-date">${p.data}.</p>
-                        <p class="card-text">${p.curso}.</p>
-                        <p class="card-text">${p.materia}.</p>
-                        <p class"card-text">${p.descricaoaula}</p>
+                        <h5 class="card-title">${p.nome}.</h5>
+                        <p class="card-text">Data da aula: ${p.data}.</p>
+                        <p class="card-text">Curso: ${p.curso}.</p>
+                        <p class="card-text">Matéria: ${p.materia}.</p>
+                        <p class"card-text">Anotações da aula${p.descricaoaula}</p>
+                        <a href="/forms.html?id=${p.id}" class="btn btn-default">Editar Produto</a>
+
                     </div>
                 `).join('');
                 Aulas.innerHTML = conteudo;
