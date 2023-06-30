@@ -1,21 +1,15 @@
 
-.card-body {
-    display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    background-color: #2d66ac;
-    margin-left: 3rem;
-    margin-right: -2rem;
-    position: fixed;
-    height: 20rem;
-    width: 10rem;
-    padding: 0 5rem 5rem 5rem;
+#Aulas{
+width:80%;
+display:flex;
 }
+
+
+
 .card {
     position: relative;
-    width: 200px;
-    height: 250px;
+    width: 280px;
+    height: 18.8rem;
     border-radius: 14px;
     z-index: 1111;
     overflow: hidden;
@@ -23,16 +17,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    margin-left: 17rem;
+    background: #2d66ac;
+    margin-left: 15rem;
   }
   
   .bg {
+    color:white;
     position: absolute;
+    font-size:1rem;
     top: 5px;
     left: 5px;
-    width: 190px;
-    height: 260px;
+    width: 270px;
+    height: 290px;
     z-index: 2;
     background: #2d66ac;
     backdrop-filter: blur(24px);
@@ -42,20 +38,7 @@
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  
-  .blob {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ff0000;
-    opacity: 1;
-    filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
-  }
+
   
   @keyframes blob-bounce {
     0% {
@@ -79,14 +62,16 @@
     }
   }
   .editar{
-    color: green;
+    color: white;
     text-decoration: none;
-    background-color: white;
+    background-color: green;
+    border: 1px solid black;
     
   }
 #apagar{
-    color: #ff0000;
-
+background-color:red;
+color:white;
+border: 1px solid black;
 }
 h1{
   color:black;
