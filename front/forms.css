@@ -1,8 +1,8 @@
 #sec{
 border-radius: 15px;
-height:35rem ;
+height:34rem ;
 width: 100%;
-margin-top: 3rem;
+margin-top: -2rem;
 margin-left: 30rem;
 margin-bottom: 2rem;
 background-color: #80b9ff;
@@ -21,9 +21,7 @@ background-color: #80b9ff;
     color:black;
     
 }
-#curso{
-    background-color: rgb(192, 192, 192);
-}
+
 label{
 color: black;
 }
