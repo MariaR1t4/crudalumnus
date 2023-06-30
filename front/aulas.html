@@ -23,6 +23,18 @@
         </div>
         
         <h1>Aulas</h1>
+        <div class="card">
+            <div class="bg">
+                <h3 class="card-title">${p.nome}.</h3>
+                <p class="card-text">Data da aula: ${p.data}.</p>
+                <p class="card-text">Curso: ${p.curso}.</p>
+                <p class="card-text">Matéria: ${p.materia}.</p>
+                <p class= "card-text">Anotações da aula: ${p.descricao}</p>
+                <a href="/forms.html?id=${p.id}" class="editar">Editar Aula</a>
+                <button id="apagar">Apagar aula</button>
+            </div>
+            <div class="blob"></div>
+          </div>
         <div id="Aulas">
     
         </div>
@@ -40,7 +52,7 @@
                 const conteudo = data.map(p => `
                 
                     <div class="card-body">
-                        <h5 class="card-title">${p.nome}.</h5>
+                        <h3 class="card-title">${p.nome}.</h3>
                         <p class="card-text">Data da aula: ${p.data}.</p>
                         <p class="card-text">Curso: ${p.curso}.</p>
                         <p class="card-text">Matéria: ${p.materia}.</p>

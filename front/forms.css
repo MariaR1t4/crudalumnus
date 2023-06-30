@@ -1,16 +1,82 @@
 #sec{
 border-radius: 15px;
 height:35rem ;
-width: 80%;
+width: 100%;
 margin-top: 3rem;
+margin-left: 30rem;
+margin-bottom: 2rem;
+background-color: #80b9ff;
+}
+.apagar{
+    background-color: red;
+}
+#chamada{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .h1{
     color: white;
     text-align: center;
     font-size: 5rem;
-    padding-top:2rem ;
+   margin-left: 10rem;
     color:black;
+}
+#curso{
+    background-color: rgb(192, 192, 192);
 }
 label{
 color: black;
 }
+body {
+  background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .container input[type="text"],
+  .container input[type="email"],
+  .container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   
+  }
+  
+  .registrar{
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .apagar{
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .registrar:hover {
+    background-color: #45a049;
+  }
+  .apagar:hover {
+    background-color: rgb(207, 2, 2);
+  }
