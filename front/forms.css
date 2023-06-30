@@ -16,9 +16,10 @@ background-color: #80b9ff;
 .h1{
     color: white;
     text-align: center;
-    font-size: 5rem;
+    font-size: 7rem;
    margin-left: 10rem;
     color:black;
+    
 }
 #curso{
     background-color: rgb(192, 192, 192);
@@ -26,9 +27,7 @@ background-color: #80b9ff;
 label{
 color: black;
 }
-body {
-  background-color: #f4f4f4;
-  }
+
   
   .container {
     max-width: 500px;

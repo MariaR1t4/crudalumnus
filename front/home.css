@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  background-color: #f4f4f4;
 }
   header{
     height: 3rem;
@@ -13,7 +14,7 @@ body{
 
 main{
   padding-top: 3rem;
- 
+  
   width: 100%;
   height: 100%;
   top: 0;
@@ -39,18 +40,6 @@ main{
     padding-top:px;
     margin-top: 3rem;
   }
-#backgroud{
-    
-    opacity: 0.5;
-    width: 100vw;
-    height: 130vh;
-    background-repeat: no-repeat;
-    background-size:cover ;
-    position: fixed;
-    top: -15rem;
-    left: 0;
-    z-index: -10;
-}
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -76,17 +65,20 @@ main{
   .carousel {
     margin: 0 auto;
     animation-name: carouselAnim;
-    animation-duration: 30s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
-    position: relative;
-    width: 60%;
-    height: 45rem;
-    
+    margin-top: -3rem;
+    width: 70%;
+    height: 40rem;
+    margin-bottom:5rem ;
     }
     @keyframes carouselAnim {
     0% { background-image: url("./imagens/sala1.png");  
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size:cover;} 
+        50% { background-image: url("./imagens/Sala3.png");  
+          background-repeat: no-repeat;
+          background-size:cover;} 
 
     100% { background-image: url("./imagens/sala2.jpg");  
         background-repeat: no-repeat;
@@ -94,8 +86,12 @@ main{
     }
     h1{
         text-align: center;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 5rem;
+        font-family:Script MT;
+        font-size: 7rem;
         margin-top: 1rem;
         color: black;
+    }
+    .secc{
+     
+      margin-left: 10%;
     }
