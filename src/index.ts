@@ -19,7 +19,7 @@ app.use(express.static('front'));
 app.use(morgan('combined'));
 
 //app.use('/app', express.static(path.join(__dirname, 'src')))
-app.use('/app/classroom', classroomRouter);
+app.use('/app/classroom/chamada', classroomRouter);
 
 app.listen(port,()=>{
     console.log(`Servido iniciado em http:/localhost:${port}`);

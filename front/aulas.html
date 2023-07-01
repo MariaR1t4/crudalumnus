@@ -34,22 +34,21 @@
 
         function loadAulas(){
             const Aulas = document.getElementById('Aulas');
-            fetch('http://localhost:3030/app/classroom')
+            fetch('http://localhost:3030/app/classroom/chamada')
             .then(f => f.json())
             .then(data => {
                 const conteudo = data.map(p => `
                 
-                <div class="card">
-            <div class="bg">
-                <h3 class="card-title">${p.nome}.</h3>
-                <p class="card-text">Data da aula: ${p.data}.</p>
-                <p class="card-text">Curso: ${p.curso}.</p>
-                <p class="card-text">Matéria: ${p.materia}.</p>
-                <p class= "card-text">Anotações da aula: ${p.descricao}</p>
-                <a href="/forms.html?id=${p.id} " class="editar">Editar Aula</a>
-                <button id="apagar">Apagar aula</button>
+                <div class="card col-sm-1.5 col-md-1.8">
+                <div class="bg">
+                    <h3 class="card-title">${p.nome}.</h3>
+                    <p class="card-text">Data da aula: ${p.data}.</p>
+                    <p class="card-text">Curso: ${p.curso}.</p>
+                    <p class="card-text">Matéria: ${p.materia}.</p>
+                    <p class= "card-text">Anotações da aula: ${p.descricao}</p>
+                    <a href="/forms.html?id=${p.id}" class="editar">Editar Aula</a>
+                </div>
             </div>
-          </div>
                 `).join('');
                 Aulas.innerHTML = conteudo;
             })

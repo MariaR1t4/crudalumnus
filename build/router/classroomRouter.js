@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const classroom_Controllers_1 = __importDefault(require("../controllers/classroom.Controllers"));
 const classroomRouter = (0, express_1.Router)();
-classroomRouter.post('/chamada', classroom_Controllers_1.default.getInstance().saveClassroom);
+classroomRouter.post('/', classroom_Controllers_1.default.getInstance().saveClassroom);
 classroomRouter.get('/', classroom_Controllers_1.default.getInstance().getClassroom);
 classroomRouter.get('/:id', classroom_Controllers_1.default.getInstance().getClassroomById);
 classroomRouter.delete('/:id', classroom_Controllers_1.default.getInstance().deleteClassroomById);

@@ -1,93 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="forms.css">
-    <link rel="stylesheet" href="reset.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="forms.css">
+  <link rel="stylesheet" href="reset.css">
 
-    <title>Cadastrar aula</title>
+  <title>Cadastrar aula</title>
 </head>
-<body >
-    <header></header>
-   
-<main>
-   
-        <div  class="sidenav">
-          <a href="javascript:void(0)" ></a>
-          <a href="index.html">Home</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="aulas.html">Aulas</a>
-          <a href="forms.html">Cadastrar aula</a>
-        </div>
-        
-      
-        <h1 class="h1" >Registrar chamada</h1>
-        <section class="container" id="sec" >
-       
-        <div id="chamada">
-          <form class="row g-3" id="Form">
-              <div class="col-md-11">
-                <label for="id" class="form-label">Id da Aula:</label>
-                <input type="text" id="id" name="id" aria-describedby="helpId" placeholder="Código gerado automaticamente" disabled>
-              </div>
-      
-              <div class="col-md-11">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <small id="nomeError" style="display: none;">Nome errado</small>
-              </div>
-            
-              <div class="col-md-3 " style="margin-top: 1rem; ">
-                <label for="data" class="form-label">Data:</label>
-                <input type="date" name="data" id="data" aria-describedby="helpId" placeholder=""  required>
-          
-              
-              </div>
-              <div class="col-md-4 " style="margin-top: 1rem;">
-                <label for="curso" class="form-label">Curso:</label>
-                <input type="text" name="curso" id="curso" aria-describedby="helpId" value="Informatica p/ Internet" readonly>
-      
-              </div>
-              <div class="col-md-4" style="margin-top: 1rem;">
-                <label for="materia" class="form-label">Matéria:</label>
-                <input type="text" name="materia" id="materia" placeholder="Escolha a matéria" list="mat" required>
-                <datalist id="mat">
-                  <option value="LPI">Fillipe</option>
-                  <option value="Design">Adriano</option>
-                  <option value="Banco de dados">Adileine</option>
-                  <option value="PHP">Helder</option>
-                  <option value="Gestão de Conteúdo Web">Robson</option>
-                </datalist>
-              </div >
-            
-              <div class="col-md-11" style="margin-top: 1rem;">
-                <label for="descricao" class="form-label">Descrição da aula:</label>
-                <textarea name="descricao" id="descricao" rows="3" required></textarea>
-              </div>
-              <div class="col-12" style="margin-top: 1rem; ">
-                <button id="submitButton" type="submit" class="registrar">Registrar aula</button>
-              </div>
-              <div class="col-12" style="margin-top: 1rem; ">
-                <button id="apagarButton" type="submit" class="apagar" >Apagar aula</button>
-              </div>
-          </form>
-          </div>
-        </div>
-        
-      </section>
-    </main>
 
-        <script>
-     
-        function data(){
-         document.getElementById("data").datepicker()
-        }
+<body>
+  <header></header>
+
+  <main>
+
+    <div class="sidenav">
+      <a href="javascript:void(0)"></a>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="aulas.html">Aulas</a>
+      <a href="forms.html">Cadastrar aula</a>
+    </div>
+
+
+    <h1 class="h1">Registrar chamada</h1>
+    <section class="container" id="sec">
+
+      <div id="chamada">
+        <form class="row g-3" id="Form">
+          <div class="col-md-11">
+            <label for="id" class="form-label">Id da Aula:</label>
+            <input type="text" id="id" name="id" aria-describedby="helpId" placeholder="Código gerado automaticamente"
+              disabled>
+          </div>
+
+          <div class="col-md-11">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <small id="nomeError" style="display: none;">Nome errado</small>
+          </div>
+
+          <div class="col-md-3 " style="margin-top: 1rem; ">
+            <label for="data" class="form-label">Data:</label>
+            <input type="date" name="data" id="data" aria-describedby="helpId" placeholder="" required>
+
+
+          </div>
+          <div class="col-md-4 " style="margin-top: 1rem;">
+            <label for="curso" class="form-label">Curso:</label>
+            <input type="text" name="curso" id="curso" aria-describedby="helpId" value="Informatica p/ Internet"
+              readonly>
+
+          </div>
+          <div class="col-md-4" style="margin-top: 1rem;">
+            <label for="materia" class="form-label">Matéria:</label>
+            <input type="text" name="materia" id="materia" placeholder="Escolha a matéria" list="mat" required>
+            <datalist id="mat">
+              <option value="LPI">Fillipe</option>
+              <option value="Design">Adriano</option>
+              <option value="Banco de dados">Adileine</option>
+              <option value="PHP">Helder</option>
+              <option value="Gestão de Conteúdo Web">Robson</option>
+            </datalist>
+          </div>
+
+          <div class="col-md-11" style="margin-top: 1rem;">
+            <label for="descricao" class="form-label">Descrição da aula:</label>
+            <textarea name="descricao" id="descricao" rows="3" required></textarea>
+          </div>
+          <div class="col-12" style="margin-top: 1rem; ">
+            <button id="submitButton" type="submit" class="registrar">Registrar aula</button>
+          </div>
+
+          <div class="col-12" style="margin-top: 1rem; ">
+            <button id="editButton" type="submit" class="registrar">Alterar aula</button>
+          </div>
+
+          <!-- <div class="col-12" style="margin-top: 1rem; ">
+                <button id="apagarButton" type="submit" class="apagar" >Apagar aula</button>
+              </div>-->
+        </form>
+      </div>
+      </div>
+
+
+
+    </section>
+  </main>
+
+  <script>
+
+    function data() {
+      document.getElementById("data").datepicker()
+    }
 
     const Form = document.getElementById("Form");
-  
+
     const nomeError = document.getElementById('nome');
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -97,33 +108,35 @@
       ev.preventDefault();
       const formData = new FormData(Form);
       const aulas = {};
-
-
       formData.forEach((valor, atributo) => aulas[atributo] = valor);
 
-      /*if(aulas.nome.length >4) {
-        console.log('here error')
-        nomeError.style = { display: 'block', color: 'red'}
-        return;
-      }*/
-
       console.log(JSON.stringify(aulas))
-      fetch('http://localhost:3030/app/classroom/chamada', {
-        method: 'POST',
+      const metodo = id ? "PUT" : "POST";
+      const path = "/chamada/" + (id ? id : '')
+
+
+      fetch('http://localhost:3030/app/classroom' + path, {
+        method: metodo,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(aulas) 
+        body: JSON.stringify(aulas)
       })
         .then(r => r.json())
-        alert("Chamada registrada com sucesso!")
-        window.location.href = 'aulas.html'
-    })
+        .then(d => {
+          alert("Chamada registrada com sucesso!")
+          window.location.href = 'aulas.html'
+        })
+
+
+    }
+    )
+
 
     function loadaulas() {
-     
+
       if (id) {
         document.getElementById("id").setAttribute('readonly', true)
 
-        fetch('http://localhost:3030/app/classroom/' + id)
+        fetch('http://localhost:3030/app/classroom/chamada/' + id)
           .then(r => r.json())
           .then(aulas => {
             console.log(aulas)
@@ -136,16 +149,17 @@
 
           })
 
-    } else {
-      document.getElementById("id").style.display="none"
-      document.getElementById("data").value = new Date().toISOString().substring(0, 10)
+      } else {
+        document.getElementById("id").style.display = "none"
+        document.getElementById("data").value = new Date().toISOString().substring(0, 10)
+      }
     }
-  }
 
 
     loadaulas();
 
-        </script>
-           
-        </body>
-        </html> 
+  </script>
+
+</body>
+
+</html>
